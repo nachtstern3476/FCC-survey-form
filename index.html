@@ -5,34 +5,78 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>FCC: Tribute Page</title>
+	<title>FCC: Survey Form</title>
 </head>
 <body>
 	<main id="main">
-		<div id="title">
-			<h1>Raden Adjeng Kartini</h1>
-			<p>A prominent Indonesian activist who advocated for women's rights and female education.</p>
+		<div id="head">
+			<h1 id="title">Dee's Hotel Satisfaction Survey Form</h1>
+			<p id="description">Overall, how satisfied were you with our services</p>
 		</div>
-		<figure id="img-div">
-			<img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/COLLECTIE_TROPENMUSEUM_Portret_van_Raden_Ajeng_Kartini_TMnr_10018776.jpg/220px-COLLECTIE_TROPENMUSEUM_Portret_van_Raden_Ajeng_Kartini_TMnr_10018776.jpg" alt="Potrait of Raden Adjeng Kartini">
-			<figcaption id="img-caption">Potrait of Raden Adjeng Kartini</figcaption>
-		</figure>
-		<section id="tribute-info">
-			<h2>About R.A Kartini</h2>
-			<ul>
-	          	<li>Fullname Raden Ajeng Kartini Djojo Adhiningrat</li>
-	          	<li>Born 21 April 1879 in Jepara, Indonesia</li>
-	          	<li>Dies at the age 25 on 17 September 1904, in Kabupaten Rembang, Indonesia</li>
-	          	<li>Known for his actions in fighting for women's rights and women's education</li>
-	          	<li>Inspired by R.A. Kartini's example, the Van Deventer family established the R.A. Kartini Foundation which built schools for women, starting in 1912 with 'Kartini's Schools' in Semarang, and followed by other women's schools in Surabaya, Yogyakarta, Malang, Madiun, Cirebon, and other areas</li>
-	          	<li>In 1964, President Sukarno declared R.A. Kartini's birth date, 21 April, as "Kartini Day"—an Indonesian national holiday.</li>
-			</ul>
-
-			<blockquote>
-				<p><strong>"Out of Dark Comes Light"</strong></p>
-				<cite>--R.A Kartini</cite>
-			</blockquote>
-			<h3>If you want to read more about her story, you can read it in <a id="tribute-link" href="https://en.wikipedia.org/wiki/Kartini" target="_blank">R.A Kartini Wikipedia</a></h3>
+		<section>
+			<form id="survey-form">
+				<div class="form-group">
+					<label for="name" id="name-label">Name</label>
+					<input class="form-control" type="text" id="name" placeholder="Enter your name" required="true">
+				</div>
+				<div class="form-group">
+					<label for="email" id="email-label">Email</label>
+					<input class="form-control" type="email" id="email" placeholder="Enter your email" required="true">
+				</div>
+				<div class="form-group">
+					<label for="number" id="number-label">Age</label>
+					<input class="form-control" type="number" id="number" min="18" max="100" placeholder="Age" required="true">
+				</div>
+				<div class="form-group">
+					<p>How long do you stay?</p>
+					<select id="dropdown" class="form-control">
+						<option value="1">1 Day</option>
+						<option value="3">3 Days</option>
+						<option value="5">5 Days</option>
+						<option value="7">One Week</option>
+						<option value="more">More..</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<p>Would you recommend your friend to stay here?</p>
+					<label>
+						<input class="form-control" type="radio" value="yes" name="recommend">
+						Yes, absolutely.
+					</label>
+					<label>
+						<input class="form-control" type="radio" value="maybe" name="recommend">
+						Maybe.
+					</label>
+					<label>
+						<input class="form-control" type="radio" value="no" name="recommend">
+						No, thank you.
+					</label>
+				</div>
+				<div class="form-group">
+					<p>What service do you like the most?</p>
+					<label>
+						<input class="form-control" type="checkbox" value="24-hours-service" name="checkboxes">
+						24 Hours Service
+					</label>
+					<label>
+						<input class="form-control" type="checkbox" value="customer-service" name="checkboxes">
+						Customer Services
+					</label>
+					<label>
+						<input class="form-control" type="checkbox" value="room-service" name="checkboxes">
+						Room Services
+					</label>
+					<label>
+						<input class="form-control" type="checkbox" value="breakfeast-service" name="checkboxes">
+						Breakfeast Services
+					</label>
+				</div>
+				<div class="form-group">
+					<p>Any comments or suggestions?</p>
+					<textarea class="form-control" id="comments" placeholder="Enter your comment here..."></textarea>
+				</div>
+				<button id="submit" type="submit">Submit</button>
+			</form>
 		</section>
 	</main>
 </body>
